@@ -6,14 +6,13 @@
     "module": "ESNext",
     "skipLibCheck": true,
 
-    "baseUrl": ".",
+    "baseUrl": "../ecommerce",
     "paths": {
       "@/*": ["./src/*"]
     },
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "moduleResolution": "node",  // Changed from "bundler" to "node"
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
@@ -23,7 +22,12 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["src"]
+    "noFallthroughCasesInSwitch": true,
+
+
+  /* Build Optimization */
+  "incremental": true,
+  "tsBuildInfoFile": ".tsbuildinfo"
+},
+  "include": ["./src/**/*"]
 }
